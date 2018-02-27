@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Ольга Navi](https://up.htmlacademy.ru/htmlcss/20/user/162408).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
