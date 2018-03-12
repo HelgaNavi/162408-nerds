@@ -136,14 +136,23 @@
 			  Скидка 10% для друзей из социальных сетей.
 		  </p>
 	  </footer>
-	  		<section class="modal modal-mail">
-			<h2>Напишите нам</h2>
-			<p>Ваше имя</p>
-			<p>Ваш e-mail</p>
-			<p>Текст письма</p>
-			<!--Здесь будет форма-->
-			<span class="modal-close">X</span>
-			<span class="button">ОТПРАВИТЬ</span>
+	  	<section class="modal modal-mail">
+        	<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+					<h2>Напишите нам</h2>
+          			<p class="appointment-item">
+            			<label for="appointment-date">Ваше имя</label>
+            			<input id="appointment-name" type="text" name="username"  placeholder="Имя Фамилия">
+          			</p>
+          			<p class="appointment-item">
+            			<label for="appointment-email">Ваш e-mail:</label>
+            			<input id="appointment-email" type="email" name="letters" placeholder="email@example.com">
+          			</p>
+            		<br>Информация о себе:<br>
+            		<textarea name="comment" id="comment-field" rows="3" placeholder="В свободной форме"></textarea><br>
+            		<input type="checkbox" name="subscribe" id="subscribe-field" checked>           
+          			<button class="button" type="submit">Отправить</button>
+					<span class="modal-close">X</span>
+			</form>
 		</section>
   </body>
 </html>
