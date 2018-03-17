@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, Sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+	
+	background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+/*общая настройка кнопки*/
+.button {
+  font: inherit;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  background-color: #fb565a;
+  text-transform: uppercase;
+  border: none;
+}
+.button:hover,
+.button:focus,
+.button:active {
+	background-color: #d7373b;
+}
+/*красная кнопка Заказать-настройка*/
+.button1 {
+    font: inherit;
+
+ 	text-align: center;
+ 	color: #ffffff;
+ 	vertical-align: middle;
+	background-color:#fb565a;
+	text-transform: uppercase;
+
+}
+/*зеленая кнопка Заказать-настройка*/
+.button2 {
+  font: inherit;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  background-color:#00ca74;
+  text-transform: uppercase;
+  
+}
+/*желтая кнопка Заказать-настройка*/
+.button3 {
+  font: inherit;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  background-color:#efc84a;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/*красная активная кнопка Заказать*/
+.button1:hover,
+.button1:focus,
+.button1:active {
+  background-color: #d7373b;
+}
+/*зеленая активная кнопка Заказать*/
+.button2:hover,
+.button2:focus,
+.button2:active {
+  background-color: #00aa62;
+}
+/*желтая активная кнопка Заказать*/
+.button3:hover,
+.button3:focus,
+.button3:active {
+  background-color: #e5a722;
+}
+/*
+.button1:hover {background-color:#fb565a;}
+.button1:focus {background-color:#e74246;}
+.button1:active {background-color:#d7373b;}
+ 
+.button2:hover {background-color:#00ca74;}
+.button2:focus {background-color:#00bc6c;}
+.button2:active {background-color:#00aa62;}
+ 
+.button3:hover {background-color:#efc84a;}
+.button3:focus {background-color:#eab534;}
+.button3:active {background-color:#e5a722;}
+*/
+/*настройка шрифта в меню*/
+.main-navigation {
+  font-size: 16px;
+  line-height: 30px;
+	font-weight: 500;
+  color: #000000;
+	text-transform: uppercase;
+
+  background-color: #eeeeee;
+}
+/*убираем маркерованный список в меню и корзине*/
+.site-navigation,
+.basket-navigation {
+  list-style: none;
+}
+/*задаем цвет шрифта меню и корзине*/
+.site-navigation a,
+.basket-navigation a {
+  color: #000000;
+}
+/*изменение цвета шрифта при наведении курсора в меню и корзине*/
+.site-navigation a:hover,
+.basket-navigation a:hover {
+  color: #fb565a;
+}
+/*фокусировка в меню и корзине*/
+.site-navigation a:focus,
+.basket-navigation a:focus {
+	color: #444444;
+}
+/*цвет фона слайдера*/
+.slider {
+	background-color: #eeeeee;
+}
+/*цвет фона галлереи слайдера*/
+.gallery {
+	background-color: #eeeeee;
+}
+/*убираем маркерованный список в услугах*/
+.services-list {
+	list-style: none;
+}
+/*расположение по центру в услугах*/
+.services-item {
+  text-align: center;
+}
+/*заголовки в услугах*/
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+/*убираем маркерованный список в слогане*/
+.slogan-list,{
+	list-style: none;
+}
+/*заголовок слогана*/
+.slogan h2 {
+	font-size: 45px;
+ 	line-height: 45px;
+	font-weight: 700;
+}
+/*заголовок Ордерс*/
+.orders h2 {	
+	font-size: 16px;
+ 	line-height: 24px;
+	font-weight: 700;}
+/*заголовок информера*/
+.informer h2 {
+	font-size: 16px;
+ 	line-height: 24px;
+	font-weight: 500;}
+/*подписи в информере*/
+.informer-info-2{
+	font-size: 16px;
+ 	line-height: 18px;
+	font-weight: 400;}
+/*цифры и проценты в информере*/
+.informer-info-1{
+	font-size: 45px;
+ 	line-height: 10px;
+	font-weight: 500;
+}
+/*цвет фона футера*/
+.main-footer {
+	background-color: #ffffff;
+}
+/*модальное окно Напишите нам*/
+.appointment-item input {
+  font: inherit;
+
+  background-color: transparent;
+  border: 2px solid #d7dcde;
+}
+
+.modal {
+  background-color: #ffffff;
+
+}
+.modal h2 {
+  font-size: 45px;
+  line-height: 45px;
+}
+/*убираем ссылки футер контакты*/
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  text-decoration: none;
+}
+/*располагаем по центру соцкнопки*/
+.footer-social {
+  text-align: center;
+}
+/*убираем маркерный список соцкнопок*/
+.footer-social ul {
+  list-style: none;
+}
+/*оформление слогана в футере*/
+.futer-slogan {
+	color: #000000;
+	font-size: 36px;
+    line-height: 36px;
+}
+
+.social-button:focus{
+  background-color: #d7373b;
+}
+/*Заголовок 2-й страницы*/
+.page-title {
+  font-size: 55px;
+  line-height: 55px;
+}
+/*оформление Каталог фильтры*/
+.filter fieldset {
+  border: none;
+}
+.filter legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.filter ul {
+  list-style: none;
+  line-height: 20px;
+}
+.filter-input:hover + label {
+	color: #4d4d4d;
+}
+.filter-input:focus + label {
+  color: #663d15;
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.5;
+}
+/*оформление Каталог Стоимость*/
+.filters {
+	list-style: none;
+}
+.filters a {
+	color: #000000;
+}
+
+/*оформление Каталог шаблоны*/
+.catalog-list {
+  list-style: none;
+}
+/*оформление Каталог шаблоны границы*/
+.catalog-item {
+border: 1 #000101;
+	opacity: 10px;
+}
+/*оформление пагинатора*/
+.pagination-list {
+  list-style: none;
+}
+.pagination-item a {
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active {
+  background-color: #ffffff;
+}
+.pagination-item-current a {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}

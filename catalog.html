@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+	  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
+	  <link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 <header class="main-header">
@@ -48,7 +51,7 @@
                 <label for="filter-grid-adaptive">Адаптивная</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-grid" value="fixed" id="filter-grid-fixed" >
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-grid" value="fixed" id="filter-grid-fixed" disabled >
                 <label for="filter-grid-fixed">Фиксированная</label>
               </li>
               <li class="filter-option">
@@ -183,37 +186,37 @@
 	  <section class="modal modal-Sedona-Hover">
 			<h2>SEDONA</h2>
 			<p>Информационный сайт для туристов</p>
-			<span class="bottom">9 900 РУБ.</span>
+			<span class="button">9 900 РУБ.</span>
 		</section>
 	  	  <section class="modal modal-Pink-Hover">
 			<h2>PINK APP</h2>
 			<p>Продуктовый лендинг приложения для IOS и Android</p>
-			<span class="bottom">9 900 РУБ.</span>
+			<span class="button">9 900 РУБ.</span>
 		</section>
 	  	<section class="modal modal-Barbershop-Hover">
 			<h2>BARBERSHOP</h2>
 			<p>Сайт салона красоты. Для мужчин, да.</p>
-			<span class="bottom">9 900 РУБ.</span>
+			<span class="button">9 900 РУБ.</span>
 		</section>
 	  	 <section class="modal modal-Mishka-Hoverr">
 			<h2>MISHKA</h2>
 			<p>Интернет-магазин вязанных игрушек</p>
-			<span class="bottom">9 900 РУБ.</span>
+			<span class="button">9 900 РУБ.</span>
 		</section>
 	  	<section class="modal modal-APlus-Hover">
 			<h2>A PLUS</h2>
 			<p>Лендинг курсов повышения квалификации</p>
-			<span class="bottom">9 900 РУБ.</span>
+			<span class="button">9 900 РУБ.</span>
 		</section>
 	  	  	<section class="modal modal-Kvast-Hover">
 			<h2>KVAST</h2>
 			<p>Промо-сайт производителя крафтового кваса</p>
-			<span class="bottom">9 900 РУБ.</span>
+			<span class="button">9 900 РУБ.</span>
 		</section>
 	  	 
 	  	<section class="modal modal-mail">
         	<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-			<h2>Напишите нам</h2>
+			<h2>Напишите нам:</h2>
           	<p class="appointment-item">
             <label for="appointment-date">Ваше имя</label>
             <input id="appointment-name" type="text" name="username"  placeholder="Имя Фамилия">
@@ -223,8 +226,7 @@
             <input id="appointment-email" type="email" name="letters" placeholder="email@example.com">
           	</p>
             <br>Информация о себе:<br>
-            <textarea name="comment" id="comment-field" rows="3" placeholder="В свободной форме"></textarea><br>
-            <input type="checkbox" name="subscribe" id="subscribe-field" checked>           
+            <textarea name="comment" id="comment-field" rows="3" placeholder="В свободной форме"></textarea><br>         
           	<button class="button" type="submit">Отправить</button>
 			<span class="modal-close">X</span>
 			</form>

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+	  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
+	  <link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 <header class="main-header">
@@ -28,7 +31,7 @@
 			  <h2 class="visually-hidden">Слайдер</h2><!--класс потом скрыть-->
 			  <h2 class="slider">Долго, дорого,<br>скрупулезно.</h2>
 			  <p>Математически выверенный дизайн <br>для вашего сайта и мобильного приложения</p>
-			  <a class="button">Узнать больше</a>
+			  <a class="button" href="catalog.html">Узнать больше</a>
 		  </section>
 		  <section class="gallery">
 			  <h2 class=visually-hidden>Галлерея слайдера</h2><!--класс потом скрыть-->
@@ -46,20 +49,20 @@
 		  <h2 class="visually-hidden">Услуги</h2><!--класс потом скрыть-->
 			  <ul class="services-list">
 				  <li class="services-item">
-					  <h3>ВЕБ-САЙТЫ</h3>
 					  <img src="img/illustration-1.jpg" width="300" height="146" alt="ВЕБ-САЙТЫ">
+					  <h3>ВЕБ-САЙТЫ</h3>
 					  <p>Мир никогда не будит прежними после того как увидит ваш сайт!</p>
 				  </li>
 				  <a class="button1" href="veb-site.html">Заказать</a>
 				   <li class="services-item">
-					  <h3>ПРИЛОЖЕНИЯ</h3>
 					   <img src="img/illustration-2.jpg" width="300" height="146" alt="ПРИЛОЖЕНИЯ">
+					   <h3>ПРИЛОЖЕНИЯ</h3>
 					  <p>Покорите топ-10 приложений в AppStore и GooglePlay</p>
 				  </li>
 				   <a class="button2" href="attachment.html">Заказать</a>
 				   <li class="services-item">
-					  <h3>ПРЕЗЕНТАЦИИ</h3>
 					   <img src="img/illustration-3.jpg" width="300" height="146" alt="ПРЕЗЕНТАЦИИ">
+					   <h3>ПРЕЗЕНТАЦИИ</h3>
 					  <p>Вы даже не подозреваете на сколько вы изумительны!</p>
 				  </li>
 				    <a class="button3" href="presentations.html">Заказать</a>
@@ -131,7 +134,7 @@
 				  <li><a class="social-button" href="#"><img src="img/insta-icon.png" width="79" height="79"> Инстаграмм</a></li>
 			  </ul>
 		  </div>
-		  <p class="futer-slogan">
+		  <p class="footer-slogan">
 			  <b>Давайте дружить, это выгодно!</b>
 			  Скидка 10% для друзей из социальных сетей.
 		  </p>
@@ -140,16 +143,16 @@
         	<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
 					<h2>Напишите нам</h2>
           			<p class="appointment-item">
-            			<label for="appointment-date">Ваше имя</label>
+            			<label for="appointment-date">Ваше имя:</label>
             			<input id="appointment-name" type="text" name="username"  placeholder="Имя Фамилия">
           			</p>
           			<p class="appointment-item">
             			<label for="appointment-email">Ваш e-mail:</label>
             			<input id="appointment-email" type="email" name="letters" placeholder="email@example.com">
           			</p>
-            		<br>Информация о себе:<br>
+            		<br>Текст письма:<br>
             		<textarea name="comment" id="comment-field" rows="3" placeholder="В свободной форме"></textarea><br>
-            		<input type="checkbox" name="subscribe" id="subscribe-field" checked>           
+                   
           			<button class="button" type="submit">Отправить</button>
 					<span class="modal-close">X</span>
 			</form>
