@@ -10,39 +10,49 @@
   <body>
 <header class="main-header">
 	<nav class="main-navigation"><!--Навигация-->
-		<a class="main-heder-logo" href="index.html">
-			<img src="img/index-logo.svg" width="160" height="65" alt="Логотип Нёрдс">	
+		<div class="main-navigation-wrapper">
+				<div class="container">
+		<a class="main-header-logo">
+			<img src="img/index-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
 		</a>
 		<ul class="site-navigation">
 			<li><a href="studio.html">Студия</a></li>
 			<li><a href="customers.html">Клиенты</a></li>
-			<li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
+			<li><a href="catalog.html">Магазин</a></li>
 			<li><a href="contacts.html">Контакты</a></li>
 		</ul>
 		<ul class="basket-navigation"><!--Корзина-->
-			<img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
+			<li class="basket-icon"><img src="img/cart-icon.svg" alt="Корзина"></li>
 			<li><a class="basket-button" href="#">Корзина</a></li>
 		</ul>
+			</div>
+			</div>
 	</nav>
-</header>
+	</header>
+	<h1 class="page-title">Магазин готовых шаблонов</h1>
 	<main class="container">
-		<h1 class="page-title">Магазин готовых шаблонов</h1>
+		
+		  <div class="catalog-columns">
 		<section class="filtres">
 			<h2 class="visualy-hidden">Фильтр товаров</h2>
 			<!--Здесь будет форма-->
 			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
-			<fieldset>
-		      <legend>Стоимость:</legend>
-			  <label>
-				<input type="range" name="radio">
-			</label>
-				<label>
-                Стоимость:<br>
-                от<input type="text" name="primary" value="0"> 
-				до<input type="text" name="primary" value="15000"> 
-            </label>
-            <input type="hidden" name="range-price" value="7">
-			</fieldset>
+      <fieldset class="filter-item">
+        <legend>Стоимость:</legend>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar" style="margin-left: 20%; width: 30%"></div>
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+            <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+          </div>
+        </div>
+      </fieldset>
 			<fieldset>
 		  <legend>Сетка:</legend>
             <ul>
@@ -51,7 +61,7 @@
                 <label for="filter-grid-adaptive">Адаптивная</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-grid" value="fixed" id="filter-grid-fixed" disabled >
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-grid" value="fixed" id="filter-grid-fixed" >
                 <label for="filter-grid-fixed">Фиксированная</label>
               </li>
               <li class="filter-option">
@@ -100,89 +110,72 @@
 			<h2 class="visualy-hidden">Список шаблонов</h2>
 			<ul class="catalog-list">
 				<li class="catalog-item">
-					<a href="catalog-item.html">
 					<h3 class="visualy-hidden">Sedona</h3>
 						<p class="catalog-item-image">
 							<img src="img/img-sedona.png" width="360" height="576" alt="Шаблон Sedona">	
 						</p>
-					</a>
 				</li>
 				<li class="catalog-item">
-					<a href="catalog-item.html">
 					<h3 class="visualy-hidden">Pink</h3>
 						<p class="catalog-item-image">
 							<img src="img/img-pink.png" width="360" height="576" alt="Шаблон Pink">
 						</p>
-					</a>
 				</li>
 				<li class="catalog-item">
-					<a href="catalog-item.html">
 					<h3 class="visualy-hidden">Barbershop</h3>
 						<p class="catalog-item-image">
 							<img src="img/img-barbershop.png" width="360" height="576" alt="Шаблон Barbershop">	
 						</p>
-					</a>
 				</li>
 				<li class="catalog-item">
-					<a href="catalog-item.html">
 					<h3 class="visualy-hidden">Mishka</h3>
 						<p class="catalog-item-image">
 							<img src="img/img-mishka.png" width="360" height="576" alt="Шаблон Mishka">
 						</p>
-					</a>
 				</li>
 				<li class="catalog-item">
-					<a href="catalog-item.html">
 					<h3 class="visualy-hidden">A Plus</h3>
 						<p class="catalog-item-image">
 							<img src="img/img-aplus.png" width="360" height="576" alt="Шаблон A Plus">	
 						</p>
-					</a>
 				</li>
 				<li class="catalog-item">
-					<a href="catalog-item.html">
 					<h3 class="visualy-hidden">Kvast</h3>
 						<p class="catalog-item-image">
 							<img src="img/img-kvast.png" width="360" height="576" alt="Шаблон Kvast">
 						</p>
-					</a>
 				</li>
 				</ul> 
+				
 				<ul class="pagination-list">
 					<li class="pagination-item pagination-item-current"><a>1</a></li>
 					<li class="pagination-item"><a href="#">2</a></li>
 					<li class="pagination-item"><a href="#">3</a></li>
 					<li class="pagination-item"><a href="#">Следующая</a></li>
 				</ul>
-				</section>		
-				  <section class="maps">
-		  <h2 class="visually-hidden">Карта</h2><!--класс потом скрыть-->
-			  <figure class="map-adress">Изображение карты</figure>
+				</section>	
+				</div>				
+	</main>
+	<section class="maps">
+		 <!-- <h2 class="visually-hidden">Карта</h2>-->
 			  <a>
 				  <img src="img/map.png" width="1440" height="416" alt="Карта с маркером">
 			  </a>
 		  </section>
-		  <section class="contacts">
-			  <h2>NERDS DESIGN STUDIO</h2>
-			  <p>191186, Санкт-Петербург,<br>
-			  ул. Б. Конюшенная, д.19/8<br>
-			  тел. +7 (812) 275-75-75</p>
-			  <a class="button" href="#">НАПИШИТЕ НАМ</a>
-		  </section>
-	</main>
-	<footer class="main-futer">
-		  <div class="footer-social">
+	<footer class="main-footer">
+			
+		<div class="container">
+		<div class="footer-social">
 			  <ul>
 				  <li><a class="social-button" href="#"><img src="img/vk-icon.png" width="79" height="79"> Вконтакте</a></li>
 				  <li><a class="social-button" href="#"><img src="img/fb-icon.png" width="79" height="79"> Фейсбук</a></li>
 				  <li><a class="social-button" href="#"><img src="img/insta-icon.png" width="79" height="79"> Инстаграмм</a></li>
 			  </ul>
 		  </div>
-		  <p class="futer-slogan">
-			  <b>Давайте дружить, это выгодно!</b>
-			  Скидка 10% для друзей из социальных сетей.
-		  </p>
-	  </footer>
+		<p class="footer-slogan"><b>Давайте дружить, это выгодно!</br>
+			  Скидка 10% для друзей из социальных сетей.</p>
+		</div>
+	</footer>
 	  <section class="modal modal-Sedona-Hover">
 			<h2>SEDONA</h2>
 			<p>Информационный сайт для туристов</p>

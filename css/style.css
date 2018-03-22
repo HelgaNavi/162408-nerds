@@ -1,38 +1,234 @@
 body {
   margin: 0;
   padding: 0;
-
-  font-family: "Roboto", Arial, Sans-serif;
+  min-width: 1200px;
+  
+  font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #283136;
-	
-	background-color: #ffffff;
+  color: #000000;
 }
+
 a {
   text-decoration: none;
 }
-/*общая настройка кнопки*/
-.button {
-  font: inherit;
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+outline: 1px solid #00BFFF; /* Параметры рамки */ ГОЛУБОЙ
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-header {
+  background-color: #eeeeee;
+  height: 120px;
+}
+
+.main-navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+ /* Временно для сетки */
+ min-height: 125px;
+
+ align-items: center;
+ outline: 1px solid #556B2F; /* Параметры рамки */
+}
+
+.main-header-logo {
+  width: 160px;
+  height: 65px;
+ padding: 23px 20px;
+  outline: 1px solid #FF00FF; /* Параметры рамки */
+  /* Временно для сетки */
+  /* display: block;*/
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+  margin-bottom: 40px;
+    background-color: #eeeeee;
+  /* Временно для сетки */
+  min-height: 65px;
+  outline: 1px solid #FF00FF; /* Параметры рамки */
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid #4169E0; /* Параметры рамки */
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+  
+  width: 160px;
+  height: 18px;
 
   text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+  
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+  
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  
+  width: 18px;
+  height: 18px;
+  
+  background: #ffffff;
+  
+  border-radius: 50%;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.slider-item {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+  background-image: url("../img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+/*
+.slider-item:nth-child(2) {
+  background-image: url("img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+  background-image: url("img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+*/
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+.slider-item h3 {
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 27px;
+  
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.slider-item p {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.button {
+  display: block;
+  width: 240px;
+  padding: 13px 0;
+  
+  font-size: 16px;
+  line-height: 18px;
   color: #ffffff;
-  vertical-align: middle;
-  background-color: #fb565a;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: #fb565a;
+  border-radius: 3px;
   border: none;
 }
+
 .button:hover,
-.button:focus,
+.button:focus {
+  background-color: #e74246;
+}
+
 .button:active {
-	background-color: #d7373b;
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 /*красная кнопка Заказать-настройка*/
 .button1 {
     font: inherit;
-
  	text-align: center;
  	color: #ffffff;
  	vertical-align: middle;
@@ -43,7 +239,6 @@ a {
 /*зеленая кнопка Заказать-настройка*/
 .button2 {
   font: inherit;
-
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
@@ -95,22 +290,44 @@ a {
 */
 /*настройка шрифта в меню*/
 .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 16px;
   line-height: 30px;
-	font-weight: 500;
+  font-weight: 500;
   color: #000000;
-	text-transform: uppercase;
+  text-transform: uppercase;
 
   background-color: #eeeeee;
 }
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+  
+  /* Временно для сетки */
+  min-height: 65px;
+  background: rgba(234, 255, 45, 0.2); /* Подсветка */
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45); /* Подсветка */
+  outline: 1px solid #FF4500; /* Параметры рамки */
+}
+
 /*убираем маркерованный список в меню и корзине*/
 .site-navigation,
 .basket-navigation {
   list-style: none;
 }
-/*задаем цвет шрифта меню и корзине*/
+/*Ссылки навигации,задаем цвет шрифта меню и корзине*/
 .site-navigation a,
 .basket-navigation a {
+  display: block;
+  padding: 25px 20px; /*внутренние отступы меню*/
+  vertical-align: middle;
   color: #000000;
 }
 /*изменение цвета шрифта при наведении курсора в меню и корзине*/
@@ -123,21 +340,62 @@ a {
 .basket-navigation a:focus {
 	color: #444444;
 }
-/*цвет фона слайдера*/
-.slider {
-	background-color: #eeeeee;
+/*Корзина*/
+.basket-navigation {
+  display: flex;
+  max-width: 160px;
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+  
+  /* Временно для сетки */
+  min-height: 65px;
+  outline: 1px solid #FF4500; /* Параметры рамки */
 }
-/*цвет фона галлереи слайдера*/
-.gallery {
-	background-color: #eeeeee;
+/* Иконка корзинки */
+.basket-icon {
+  padding: 50px 5px;
+  position: relative;
+  background: rgba(234, 255, 45, 0.2);/* Подсветка */
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);/* Подсветка */
+}
+.basket-navigation .basket-button {
+  padding-left: 50px;
+  position: relative;
+  background: rgba(234, 255, 45, 0.2);/* Подсветка */
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);/* Подсветка */
+}
+.basket-navigation .basket-icon {
+  padding-left: 20px;
+  position: relative;
+  background: rgba(234, 255, 45, 0.2);/* Подсветка */
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);/* Подсветка */
+}
+.basket-icon::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 /*убираем маркерованный список в услугах*/
+h1{
+	font-size: 50px;
+ 	line-height: 50px;
+	font-weight: 700;
+}
 .services-list {
 	list-style: none;
 }
 /*расположение по центру в услугах*/
 .services-item {
-  text-align: center;
+  text-align: left;
+    background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
 }
 /*заголовки в услугах*/
 .services-item h3 {
@@ -145,7 +403,40 @@ a {
   line-height: 30px;
   text-transform: uppercase;
 }
+.services-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	  /* Временно для сетки */
+	min-height: 505px;
+	outline: 1px solid #FF00FF; /* Параметры рамки */ РОЗОВЫЙ
+}
+.services-item{
+	width: 360px;
+	padding: 40px 40px;
+  /* Временно для сетки */
+  min-height: 170px;
+ outline: 1px solid #FF00FF; /* Параметры рамки */ РОЗОВЫЙ
+}
+.index-columns {
+ /* Временно для сетки */
+  display: flex;
+  justify-content: space-between;
+ padding: 20px 20px;
+ outline: 1px solid #FFD700; /* Параметры рамки */ ЖЕЛТЫЙ
+}
+
+
+.slider {
+  position: relative;
+  
+  background-color: #eeeeee;
+}
 /*убираем маркерованный список в слогане*/
+
 .slogan-list,{
 	list-style: none;
 }
@@ -187,14 +478,23 @@ a {
   background-color: transparent;
   border: 2px solid #d7dcde;
 }
-
 .modal {
   background-color: #ffffff;
 
 }
 .modal h2 {
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.modal-Sedona-Hover p,
+.modal modal-Pink-Hover p,
+.modal modal-Barbershop-Hover p,
+.modal modal-Mishka-Hoverr p,
+.modal modal-APlus-Hover p,
+.modal modal-Kvast-Hover p {
+	font-size: 16px;
+  line-height: 18px;
 }
 /*убираем ссылки футер контакты*/
 .footer-contacts a:hover,
@@ -219,14 +519,121 @@ a {
 .social-button:focus{
   background-color: #d7373b;
 }
-/*Заголовок 2-й страницы*/
-.page-title {
-  font-size: 55px;
-  line-height: 55px;
-}
 /*оформление Каталог фильтры*/
-.filter fieldset {
+.filter-item {
+  margin: 0;
+  padding: 0;
+  
   border: none;
+  
+  /* Для демонстрации */
+  width: 260px;
+  margin: 50px auto; 
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #f1f1f1;
+  
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  
+  border: none;
+}
+.filter fieldset:first-child {
+  margin-bottom: 35px;
 }
 .filter legend {
   font-size: 18px;
@@ -234,8 +641,25 @@ a {
   font-weight: 700;
 }
 .filter ul {
+  padding: 0;
+  margin: 0;
+  
   list-style: none;
-  line-height: 20px;
+  line-height: 18px;
+}
+/*Отступы у списка фильтров*/
+.filter-option {
+  margin-bottom: 19px;
+  padding-left: 45px; /*Внутренний левый отступ у списка фильтров*/
+}
+/*Делаем label блочным, задаём относительное позиционирование. Задаём курсор с указателем и отменяем выделение текста подписи цветом.*/
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
 }
 .filter-input:hover + label {
 	color: #4d4d4d;
@@ -249,13 +673,94 @@ a {
 
   opacity: 0.5;
 }
+/*Стилизованные чекбоксы с типом checkbox. Псевдоэлемент,размеры и обводка, координаты*/
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #000000;
+}
+/*иконка, что поле выбрано. Псевдоэлемент, высота, ширина и временный фон*/
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px; /*координаты*/
+  left: -38px;/*координаты*/
+  width: 12px;
+  height: 12px;
+  
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+/*поля с типом radio.Псевдоэлемент, размеры и обводка, круглые.*/
+.filter-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -42px;/*координаты*/
+  top: -1px; /*координаты*/
+  width: 16px;
+  height: 16px;
+  
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+/* иконку,поле выбрано. Псевдоэлемент, задаём ему высоту, ширину и фон, круглые*/
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 5px; /*координаты*/
+  left: -36px; /*координаты*/
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  border-radius: 50%;
+}
+.maps {
+	 	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	  /* Временно для сетки */
+	min-height: 420px;
+	 
+}
 /*оформление Каталог Стоимость*/
 .filters {
-	list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  list-style: none;
+
 }
-.filters a {
-	color: #000000;
+.filters li {
+  position: relative;
+  margin-right: 42px;
+
 }
+.filter legend {
+  margin-bottom: 26px;
+  
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.filters {list-style: none;}
+.filters a {color: #000000;}
 
 /*оформление Каталог шаблоны*/
 .catalog-list {
@@ -266,20 +771,113 @@ a {
 border: 1 #000101;
 	opacity: 10px;
 }
-/*оформление пагинатора*/
-.pagination-list {
+
+.slogan {
+ /* Временно для сетки */
+ width: 750px;
+ min-height: 200px;
+ outline: 1px solid #800080; /* Параметры рамки */ ПУРПУРНЫЙ
+}
+
+.informer {
+ /* Временно для сетки */
+ min-height: 200px;
+ outline: 1px solid #800080; /* Параметры рамки */ ПУРПУРНЫЙ
+}
+
+.thumbnail-site {
+	display: flex;
+	
+	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	  /* Временно для сетки */
+	min-height: 180px;
+	outline: 1px solid #800080; /* Параметры рамки */ ПУРПУРНЫЙ
+}
+.gallery-thumbnail{
+	width: 300px;
+
+  /* Временно для сетки */
+  min-height: 180px;
+  outline: 1px solid #00BFFF; /* Параметры рамки */ ГОЛУБОЙ
+}
+
+.map-adress {
+	width: 100%;
+	 background-color: #eeeeee;
+  /* Временно для сетки */
+  min-height: 420px;
+}
+.filtres {
+	  width: 260px;
+
+  /* Временно для сетки */
+  min-height: 1000px;
+  outline: 1px solid #800080; /* Параметры рамки */ ПУРПУРНЫЙ
+}
+
+.catalog {
+  width: 760px;
+
+  /* Временно для сетки */
+  min-height: 2015px;
+  outline: 1px solid #800080; /* Параметры рамки */ ПУРПУРНЫЙ
+}
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
   list-style: none;
 }
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid #800080; /* Параметры рамки */ ПУРПУРНЫЙ
+}
+.catalog-item{
+  width: 360px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  /* Временно для сетки */
+  min-height: 620px;
+  outline: 1px solid #800080; /* Параметры рамки */ ПУРПУРНЫЙ
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+.pagination-item {
+  margin-right: 5px;
+}
+.pagination-item:last-child {
+  margin-right: 0;
+}
 .pagination-item a {
-  color: #000000;
+  display: block;
+  padding: 10px 19px;
+  
+  color: #444444;
 
   background-color: #eeeeee;
 }
 .pagination-item a:hover,
 .pagination-item a:focus,
 .pagination-item a:active {
-  background-color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #444444;
 }
+
 .pagination-item-current a {
   color: #000000;
 
@@ -292,4 +890,34 @@ border: 1 #000101;
   color: #000000;
 
   background-color: #ffffff;
+}
+.main-footer {
+   margin-top: 10px;
+   padding: 75px;
+
+   /* Временно для сетки */
+   min-height: 215px;
+   
+outline: 1px solid #FF0000; /* Параметры рамки */ КРАСНЫЙ
+}
+.main-footer .container {
+  display: flex;
+}
+.footer-social {
+	width: 260px;
+  margin: 0;
+  margin-right: 10px;
+
+  /* Временно для сетки */
+  min-height: 215px;
+  outline: 1px solid #006400; /* Параметры рамки */ ЗЕЛЕНЫЙ
+}
+.footer-slogan {
+	width: 700px;
+  margin: 0;
+  margin-left: auto;
+
+  /* Временно для сетки */
+  min-height: 215px;
+  outline: 1px solid #006400; /* Параметры рамки */ ЗЕЛЕНЫЙ
 }

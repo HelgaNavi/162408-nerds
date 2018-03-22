@@ -10,7 +10,9 @@
   <body>
 <header class="main-header">
 	<nav class="main-navigation"><!--Навигация-->
-		<a class="main-heder-logo">
+		<div class="main-navigation-wrapper">
+				<div class="container">
+		<a class="main-header-logo">
 			<img src="img/index-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
 		</a>
 		<ul class="site-navigation">
@@ -20,55 +22,69 @@
 			<li><a href="contacts.html">Контакты</a></li>
 		</ul>
 		<ul class="basket-navigation"><!--Корзина-->
-			<img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
+			<li class="basket-icon"><img src="img/cart-icon.svg" alt="Корзина"></li>
 			<li><a class="basket-button" href="#">Корзина</a></li>
 		</ul>
+			</div>
+			</div>
 	</nav>
-</header>
+	</header>
+	    <section class="slider">
+		<div class="container">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+        <div class="slider-controls">
+          <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый слайд</label>
+         <!-- <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй слайд</label>
+          <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий слайд</label>-->
+        </div>
+        <ul class="slider-list">
+          <li class="slider-item">
+            <h3>Долго, дорого,<br> скрупулезно.</h3>
+            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+            <a class="slider-item-button button" href="#">Узнать больше</a>
+          </li>
+        <!-- <li class="slider-item">
+				<h3>Любим математику как никто другой</h3>
+				<p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+				<a class="slider-item-button button" href="#">Узнать больше</a>
+				</li>
+				<li class="slider-item">
+				<h3>Только ночь,<br> только хардкор</h3>
+				<p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+				<a class="slider-item-button button" href="#">Узнать больше</a>
+			</li>-->
+      </ul>  
+      </div>
+    </section>
 	  <main class="container">
-		  <h1 class="visually-hidden">Нёрдс</h1><!--класс потом скрыть-->
-		  <section class="slider"> <!--Здесь будет слайдер-->
-			  <h2 class="visually-hidden">Слайдер</h2><!--класс потом скрыть-->
-			  <h2 class="slider">Долго, дорого,<br>скрупулезно.</h2>
-			  <p>Математически выверенный дизайн <br>для вашего сайта и мобильного приложения</p>
-			  <a class="button" href="catalog.html">Узнать больше</a>
-		  </section>
-		  <section class="gallery">
-			  <h2 class=visually-hidden>Галлерея слайдера</h2><!--класс потом скрыть-->
-			  <figure class="gallery-slider">
-				  <img src="img/slide1.png" width="698" height="413" alt="Слайд1">
-				  <img src="img/slide2.png" width="663" height="430" alt="Слайд2">
-				  <img src="img/slide3.png" width="759" height="411" alt="Слайд3">
-			  </figure>
-			  <figure class="slider-kontrol">
-				  <h2 class=visually-hidden>Индикаторы слайдера</h2><!--класс потом скрыть-->
-				  <!--Здесь будут индикаторы для слайдера-->
-			  </figure>
-		  </section>
-		  <section class="services">
-		  <h2 class="visually-hidden">Услуги</h2><!--класс потом скрыть-->
+		<section class="services">
+		  <!--<h2 class="visually-hidden">Услуги</h2>-->
 			  <ul class="services-list">
 				  <li class="services-item">
 					  <img src="img/illustration-1.jpg" width="300" height="146" alt="ВЕБ-САЙТЫ">
 					  <h3>ВЕБ-САЙТЫ</h3>
 					  <p>Мир никогда не будит прежними после того как увидит ваш сайт!</p>
-				  </li>
-				  <a class="button1" href="veb-site.html">Заказать</a>
+					  <a class="button1" href="veb-site.html">Заказать</a>
+				  </li> 
 				   <li class="services-item">
 					   <img src="img/illustration-2.jpg" width="300" height="146" alt="ПРИЛОЖЕНИЯ">
 					   <h3>ПРИЛОЖЕНИЯ</h3>
 					  <p>Покорите топ-10 приложений в AppStore и GooglePlay</p>
+					  <a class="button2" href="attachment.html">Заказать</a>
 				  </li>
-				   <a class="button2" href="attachment.html">Заказать</a>
 				   <li class="services-item">
 					   <img src="img/illustration-3.jpg" width="300" height="146" alt="ПРЕЗЕНТАЦИИ">
 					   <h3>ПРЕЗЕНТАЦИИ</h3>
 					  <p>Вы даже не подозреваете на сколько вы изумительны!</p>
-				  </li>
-				    <a class="button3" href="presentations.html">Заказать</a>
+					   <a class="button3" href="presentations.html">Заказать</a>
+					</li>
 			  </ul>
-		  </section>
-		  <section class="slogan">
+		</section>
+		<div class="index-columns">
+		<section class="slogan">
 			  <h2>Мы - маленькая, но гордая<br> 
 			  дизайн-студия из Краснодара.</h2>
 			  <ul class="slogan-list">
@@ -84,20 +100,19 @@
 			  </ul>
 		  </section>
 		  <section class="informer">
-			  <h2 class="visually-hidden">Информер</h2><!--класс потом скрыть-->
+			  <!--<h2 class="visually-hidden">Информер</h2>-->
 			  <a class="main-heder-logo">
 				<img src="img/nerds-illustration.png" width="360" height="208" alt="Логотип Нёрдс-информер">
 				</a>
-			  <h2>С 2004 года любим точность во всем:</h2>
-			  <p class="informer-info-1">146%</p>
-			  <p class="informer-info-2">Уровень самоотдачи</p>
-			  <p class="informer-info-1">100%</p>
-			  <p class="informer-info-2">Соблюдение сроков</p>
-			  <p class="informer-info-1">50%</p>
-			  <p class="informer-info-2">Минимальная предоплата</p>
+			  <table>
+			  <tr><th colspan="3"><h2>С 2004 года любим точность во всем:</h2></th><tr>
+			  <tr><td><p class="informer-info-1">146%</p></td><td><p class="informer-info-1">100%</p></td><td><p class="informer-info-1">50%</p></td></tr>
+			  <tr><td><p class="informer-info-2">Уровень самоотдачи</p></td><td><p class="informer-info-2">Соблюдение сроков</p></td><td><p class="informer-info-2">Минимальная предоплата</p></td></tr>
+			  </table>
 		  </section>
+		</div>
 		  <section class="thumbnail-site">
-			  <h2 class="visually-hidden">Логотипы шаблонов сайтов</h2><!--класс потом скрыть-->
+			 <!-- <h2 class="visually-hidden">Логотипы шаблонов сайтов</h2>-->
 				<figure class="gallery-thumbnail">
 					<a href="#"><img src="img/logo-1.png" width="199" height="68" alt="HTML academy"></a>
 				</figure>
@@ -111,33 +126,25 @@
 					<a href="#"><img src="img/logo-4.png" width="173" height="84" alt="Mishka"></a>
 				</figure>
 			</section>
-		  <section class="maps">
-		  <h2 class="visually-hidden">Карта</h2><!--класс потом скрыть-->
-			  <figure class="map-adress">Изображение карты</figure>
+	</main>
+	<section class="maps">
+		 <!-- <h2 class="visually-hidden">Карта</h2>-->
 			  <a>
 				  <img src="img/map.png" width="1440" height="416" alt="Карта с маркером">
 			  </a>
 		  </section>
-		  <section class="contacts">
-			  <h2>NERDS DESIGN STUDIO</h2>
-			  <p>191186, Санкт-Петербург,<br>
-			  ул. Б. Конюшенная, д.19/8<br>
-			  тел. +7 (812) 275-75-75</p>
-			  <a class="button" href="#">НАПИШИТЕ НАМ</a>
-		  </section>
-	  </main>
-	  <footer class="main-futer">
-		  <div class="footer-social">
+	<footer class="main-footer">
+		<div class="container">
+		<div class="footer-social">
 			  <ul>
 				  <li><a class="social-button" href="#"><img src="img/vk-icon.png" width="79" height="79"> Вконтакте</a></li>
 				  <li><a class="social-button" href="#"><img src="img/fb-icon.png" width="79" height="79"> Фейсбук</a></li>
 				  <li><a class="social-button" href="#"><img src="img/insta-icon.png" width="79" height="79"> Инстаграмм</a></li>
 			  </ul>
 		  </div>
-		  <p class="footer-slogan">
-			  <b>Давайте дружить, это выгодно!</b>
-			  Скидка 10% для друзей из социальных сетей.
-		  </p>
+		<p class="footer-slogan"><b>Давайте дружить, это выгодно!</br>
+			  Скидка 10% для друзей из социальных сетей.</p>
+		</div>
 	  </footer>
 	  	<section class="modal modal-mail">
         	<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
